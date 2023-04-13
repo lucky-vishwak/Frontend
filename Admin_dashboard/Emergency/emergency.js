@@ -16,7 +16,7 @@ $("#logout").click(()=>{
 })
 let hospitalObj={name:JSON.parse(localStorage.getItem("active_user")).hospitalName};
 $.post({
-    url:"http://localhost:3005/hospital/hospital-emergency",
+    url:"http://18.116.177.198/hospital/hospital-emergency",
     data:JSON.stringify(hospitalObj),
     contentType:'application/json; charset=utf-8',
     headers:{Authorization :localStorage.getItem('token')}

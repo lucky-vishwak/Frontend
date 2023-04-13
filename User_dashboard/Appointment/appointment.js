@@ -197,7 +197,7 @@ function nextPrev(n) {
       "userid":JSON.parse(localStorage.getItem("active_user"))._id
     }
     $.post({
-      url: "http://localhost:3005/appointment/addappointment",
+      url: "http://18.116.177.198/appointment/addappointment",
       data: JSON.stringify(appointmentobj),
       contentType: 'application/json; charset=utf-8',
       headers:{Authorization :localStorage.getItem('token')}
@@ -275,7 +275,7 @@ function logout() {
 //getting hospital names
 window.onload = function () {
   $.get({
-    url: "http://localhost:3005/hospital/all-hospitals",
+    url: "http://18.116.177.198/hospital/all-hospitals",
     headers:{Authorization :localStorage.getItem('token')}
   })
     .done((response, stat) => {
@@ -333,7 +333,7 @@ function Emergency(){
         return
     }
     //console.log(x)
-    $.post({url: "http://localhost:3005/hospital/emergency",
+    $.post({url: "http://18.116.177.198/hospital/emergency",
     data:JSON.stringify(x),
     contentType: 'application/json; charset=utf-8',
     headers:{Authorization :localStorage.getItem('token')}}).done((response,stat)=>{

@@ -138,7 +138,7 @@ $('#formx').on('submit', function(event) {
    
     if (x == true) {
         $.post({
-            url:"http://localhost:3005/doctor/add-doctor", 
+            url:"http://18.116.177.198/doctor/add-doctor", 
             data:JSON.stringify(Doctors),
             contentType:'application/json; charset=utf-8',
             headers:{Authorization :localStorage.getItem('token')}

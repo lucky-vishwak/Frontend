@@ -52,7 +52,7 @@ $("#sendMessage").click(() => {
             message: $("#message").val()
         };
         $.post({
-            url: "http://localhost:3005/contact/add-contact",
+            url: "http://18.116.177.198/contact/add-contact",
             data: JSON.stringify(contactObj),
             contentType: 'application/json; charset=utf-8'
         })
@@ -67,7 +67,7 @@ $("#sendMessage").click(() => {
 $("document").ready(() => {
     console.log("hello")
     $.get({
-        url: "http://localhost:3005/doctor/total-doctors",
+        url: "http://18.116.177.198/doctor/total-doctors",
         headers: { Authorization: localStorage.getItem("token") }
     })
         .done((res) => {

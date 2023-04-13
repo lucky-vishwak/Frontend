@@ -158,7 +158,7 @@ $('#form1').on('submit', function(event) {
           alert(msg.message)
           user.image= msg.imgurl
             $.post({
-                url:"http://localhost:3005/user/register", 
+                url:"http://18.116.177.198/user/register", 
                 data:JSON.stringify(user),
                 contentType:'application/json; charset=utf-8'
             })

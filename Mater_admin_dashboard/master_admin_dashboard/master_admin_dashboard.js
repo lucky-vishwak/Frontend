@@ -18,7 +18,7 @@ $("#logout").click(() => {
 })
 
 $.get({
-    url: "http://localhost:3005/doctor/total-doctors",
+    url: "http://18.116.177.198/doctor/total-doctors",
     headers:{Authorization :localStorage.getItem('token')}
 }).done(async (res, stat) => {
     if (stat == "success") {
@@ -27,7 +27,7 @@ $.get({
 })
 
 $.get({
-    url: "http://localhost:3005/user/all-users",
+    url: "http://18.116.177.198/user/all-users",
     headers:{Authorization :localStorage.getItem('token')}
   }).done(async (res, stat) => {
     if (stat == "success") {
@@ -36,7 +36,7 @@ $.get({
   })
 
 $.get({
-    url: "http://localhost:3005/hospital/all-hospitals",
+    url: "http://18.116.177.198/hospital/all-hospitals",
     headers:{Authorization :localStorage.getItem('token')}
 }).done(async (res, stat) => {
     let hospitals=res.hospitalsObj
@@ -209,7 +209,7 @@ function graph_display_compare(val){
 }
 
 $.get({
-    url: "http://localhost:3005/appointment/total-appointments",
+    url: "http://18.116.177.198/appointment/total-appointments",
     headers:{Authorization :localStorage.getItem('token')}
 }).done(async (res, stat) => {
     appointments = res.appointments
@@ -241,7 +241,7 @@ $("#compare2").change(()=>{
 })
 
 //   $.post({
-//     url: "http://localhost:3005/appointment/all-appointments",
+//     url: "http://18.116.177.198/appointment/all-appointments",
 //     data: JSON.stringify({
 //       name: JSON.parse(localStorage.getItem("active_user")).hospitalName
 //     }),

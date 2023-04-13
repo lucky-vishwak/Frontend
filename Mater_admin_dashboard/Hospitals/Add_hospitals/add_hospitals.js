@@ -83,7 +83,7 @@ $('#form1').on('submit', function(event) {
               }
               if(flag){
                   $.post({
-                      url:'http://localhost:3005/hospital/add-hospital',
+                      url:'http://18.116.177.198/hospital/add-hospital',
                       data:JSON.stringify(HospitalObj),
                       contentType:'application/json; charset=utf-8',
                       headers:{Authorization :localStorage.getItem('token')}

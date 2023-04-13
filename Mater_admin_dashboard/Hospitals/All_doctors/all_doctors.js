@@ -35,7 +35,7 @@ function displayDoctorss(){
 let doctors=[]
 $(document).ready(()=>{
     $.get({
-        url:'http://localhost:3005/hospital/all-doctors',
+        url:'http://18.116.177.198/hospital/all-doctors',
         contentType:'application/json; charset=utf-8',
         headers:{Authorization :localStorage.getItem('token')}
     })

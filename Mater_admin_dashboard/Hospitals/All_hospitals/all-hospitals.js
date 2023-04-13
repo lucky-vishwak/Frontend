@@ -30,7 +30,7 @@ function displayHospitals(hospital){
 
 $(document).ready(()=>{
     $.get({
-        url:'http://localhost:3005/hospital/all-hospitals',
+        url:'http://18.116.177.198/hospital/all-hospitals',
         contentType:'application/json; charset=utf-8',
         headers:{Authorization :localStorage.getItem('token')}
     })

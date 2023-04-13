@@ -19,7 +19,7 @@ let hospital={name:JSON.parse(localStorage.getItem("active_user")).hospitalName}
 
 $(document).ready(()=>{
 $.post({
-    url:"http://localhost:3005/appointment/all-appointments",
+    url:"http://18.116.177.198/appointment/all-appointments",
     data:JSON.stringify(hospital),
     contentType:'application/json; charset=utf-8',
     headers:{Authorization :localStorage.getItem('token')}
