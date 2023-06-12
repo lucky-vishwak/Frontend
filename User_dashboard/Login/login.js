@@ -29,7 +29,7 @@ $("#submit").click(() => {
          password: password
       }
       $.post({
-         url: "http://18.116.177.198/login",
+         url: "https://aarogya.onrender.com/login",
          data: JSON.stringify(signObj),
          contentType: 'application/json; charset=utf-8'
       }).done(function (response) {

@@ -158,7 +158,7 @@ $('#form1').on('submit', function(event) {
           alert(msg.message)
           user.image= msg.imgurl
             $.post({
-                url:"http://18.116.177.198/user/register", 
+                url:"https://aarogya.onrender.com/user/register", 
                 data:JSON.stringify(user),
                 contentType:'application/json; charset=utf-8'
             })

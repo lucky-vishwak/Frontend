@@ -205,7 +205,7 @@ function change(imgurl) {
     }
   }
   $.post({
-    url: "http://18.116.177.198/user/edit/:username",
+    url: "https://aarogya.onrender.com/user/edit/:username",
     data: JSON.stringify(user),
     contentType: "application/json; charset=utf-8",
     headers: { Authorization: localStorage.getItem("token") },
@@ -264,7 +264,7 @@ function showPrescription(index) {
           userid: userobj._id,
         };
         $.post({
-          url: "http://18.116.177.198/doctor/ratedoctor",
+          url: "https://aarogya.onrender.com/doctor/ratedoctor",
           data: JSON.stringify(rate),
           contentType: 'application/json; charset=utf-8',
           headers: { Authorization: localStorage.getItem('token') }
@@ -532,7 +532,7 @@ $(document).ready(function () {
 function get_data_of_appointments() {
   //geting appointment details
   $.get({
-    url: `http://18.116.177.198/appointment/appointments/${userobj.username}`,
+    url: `https://aarogya.onrender.com/appointment/appointments/${userobj.username}`,
     contentType: "application/json; charset=utf-8",
     headers: { Authorization: localStorage.getItem("token") },
   }).done((response, stat) => {
@@ -631,7 +631,7 @@ function making_payment(orderId, index) {
       //alert(response.razorpay_order_id);
       //alert(response.razorpay_signature)
       var settings = {
-        "url": "http://18.116.177.198/api/payment/verify",
+        "url": "https://aarogya.onrender.com/api/payment/verify",
         "method": "POST",
         "timeout": 0,
         "headers": {
@@ -667,7 +667,7 @@ function making_payment(orderId, index) {
 function create_orderID(index) {
   //creating orderid every time on click of myappointment button for payment
   var settings = {
-    "url": "http://18.116.177.198/create/orderId",
+    "url": "https://aarogya.onrender.com/create/orderId",
     "method": "POST",
     "timeout": 0,
     "headers": {
@@ -695,7 +695,7 @@ function accept_appointment(index, confirmation) {
   if (confirmation) {
     $.ajax({
       type: "PUT",
-      url: `http://18.116.177.198/user/accept-appointment`,
+      url: `https://aarogya.onrender.com/user/accept-appointment`,
       data: JSON.stringify({ ...appo[index], userid: userobj._id }),
       contentType: "application/json; charset=utf-8",
       headers: { Authorization: localStorage.getItem("token") },
@@ -719,7 +719,7 @@ function cancelAppointment(index) {
   if (confirmation) {
     $.ajax({
       type: "PUT",
-      url: `http://18.116.177.198/user/cancel-appointment`,
+      url: `https://aarogya.onrender.com/user/cancel-appointment`,
       data: JSON.stringify(appo[index]),
       contentType: "application/json; charset=utf-8",
       headers: { Authorization: localStorage.getItem("token") },
@@ -792,7 +792,7 @@ function getChat(ind) {
     user: userobj._id
   }
   $.post({
-    url: "http://18.116.177.198/chat/get-chat",
+    url: "https://aarogya.onrender.com/chat/get-chat",
     data: JSON.stringify(conversationObj),
     contentType: 'application/json; charset=utf-8',
     headers: { Authorization: localStorage.getItem("token") }
@@ -847,7 +847,7 @@ function sendMessage(ind) {
   }
 
   $.post({
-    url: "http://18.116.177.198/chat/send-message",
+    url: "https://aarogya.onrender.com/chat/send-message",
     data: JSON.stringify(messageObj),
     contentType: "application/json; charset=utf-8",
     headers: { Authorization: localStorage.getItem("token") }

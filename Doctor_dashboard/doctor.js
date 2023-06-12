@@ -170,7 +170,7 @@ function change(img){
   
   $.ajax({
     type: "PUT",
-    url: `http://18.116.177.198/doctor/updateProfile/${doctorobj.username}`,
+    url: `https://aarogya.onrender.com/doctor/updateProfile/${doctorobj.username}`,
     data: JSON.stringify(userx),
     contentType: 'application/json; charset=utf-8',
     headers:{Authorization :localStorage.getItem('token')}
@@ -219,7 +219,7 @@ $("#todayAppointmentButton").click(() => {
         date: Today()
     }
     $.post({
-        url: `http://18.116.177.198/appointment/get-today`,
+        url: `https://aarogya.onrender.com/appointment/get-today`,
         data: JSON.stringify(detailsObj),
         contentType: 'application/json; charset=utf-8',
         headers:{Authorization :localStorage.getItem('token')}
@@ -325,7 +325,7 @@ $("#updatePercerption").click(() => {
         }
         if(appointments[x]==undefined){
           $.ajax({
-            url: `http://18.116.177.198/appointment/updateappoint/${emergency[x]._id}`,
+            url: `https://aarogya.onrender.com/appointment/updateappoint/${emergency[x]._id}`,
             type: 'PUT',
             contentType: 'application/json; charset=utf-8',
             data: JSON.stringify(updateAppointment),
@@ -347,7 +347,7 @@ $("#updatePercerption").click(() => {
         email:appointments[x].emailaddress,
         patientname:appointments[x].patientname}
         $.ajax({
-          url: `http://18.116.177.198/appointment/update-appoint/${appointments[x]._id}`,
+          url: `https://aarogya.onrender.com/appointment/update-appoint/${appointments[x]._id}`,
           type: 'PUT',
           contentType: 'application/json; charset=utf-8',
           data: JSON.stringify(updateAppointment),
@@ -375,7 +375,7 @@ $("#patientHistoryButton").click(() => {
   l=0;
   console.log(doctorobj._id)
   $.get({
-      url: `http://18.116.177.198/appointment/allAppointmentsOfDoctor/${doctorobj._id}`,
+      url: `https://aarogya.onrender.com/appointment/allAppointmentsOfDoctor/${doctorobj._id}`,
       contentType: 'application/json; charset=utf-8',
       headers:{Authorization :localStorage.getItem('token')}
   }).done((response, stat) => {
@@ -482,7 +482,7 @@ function getChat(ind) {
     doctor:doctorobj._id
   }
   $.post({
-    url: "http://18.116.177.198/chat/get-chat-doctor",
+    url: "https://aarogya.onrender.com/chat/get-chat-doctor",
     data: JSON.stringify(conversationObj),
     contentType: 'application/json; charset=utf-8',
     headers: { Authorization: localStorage.getItem("token") }
@@ -532,7 +532,7 @@ function sendMessage(ind){
         message:message,
      }
      $.post({
-      url:"http://18.116.177.198/chat/send-message-doctor",
+      url:"https://aarogya.onrender.com/chat/send-message-doctor",
       data:JSON.stringify(messageObj),
       contentType:"application/json; charset=utf-8",
       headers: { Authorization: localStorage.getItem("token") }

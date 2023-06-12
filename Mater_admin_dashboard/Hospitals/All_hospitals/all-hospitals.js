@@ -30,7 +30,7 @@ function displayHospitals(hospital){
 
 $(document).ready(()=>{
     $.get({
-        url:'http://18.116.177.198/hospital/all-hospitals',
+        url:'https://aarogya.onrender.com/hospital/all-hospitals',
         contentType:'application/json; charset=utf-8',
         headers:{Authorization :localStorage.getItem('token')}
     })

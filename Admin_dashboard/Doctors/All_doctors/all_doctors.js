@@ -98,7 +98,7 @@ $(document).ready(function(){
     });
     let hospitalObj={name:JSON.parse(localStorage.getItem("active_user")).hospitalName};
     $.post({
-      url:"http://18.116.177.198/doctor/all-doctors",
+      url:"https://aarogya.onrender.com/doctor/all-doctors",
       data:JSON.stringify(hospitalObj),
       contentType:'application/json; charset=utf-8',
       headers:{Authorization :localStorage.getItem('token')}

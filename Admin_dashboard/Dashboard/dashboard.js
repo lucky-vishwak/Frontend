@@ -18,7 +18,7 @@ $("#logout").click(() => {
 var appointments = []
 
 $.post({
-  url: "http://18.116.177.198/doctor/all-doctors",
+  url: "https://aarogya.onrender.com/doctor/all-doctors",
   data: JSON.stringify({
     name: JSON.parse(localStorage.getItem("active_user")).hospitalName
   }),
@@ -31,7 +31,7 @@ $.post({
 })
 
 $.get({
-  url: "http://18.116.177.198/user/all-users",
+  url: "https://aarogya.onrender.com/user/all-users",
   headers:{Authorization :localStorage.getItem('token')}
 }).done(async (res, stat) => {
   if (stat == "success") {
@@ -41,7 +41,7 @@ $.get({
 
 let hospitalObj={name:JSON.parse(localStorage.getItem("active_user")).hospitalName};
 $.post({
-    url:"http://18.116.177.198/hospital/hospital-emergency",
+    url:"https://aarogya.onrender.com/hospital/hospital-emergency",
     data:JSON.stringify(hospitalObj),
     contentType:'application/json; charset=utf-8',
     headers:{Authorization :localStorage.getItem('token')}
@@ -147,7 +147,7 @@ function graph_display(val) {
 }
 
 $.post({
-  url: "http://18.116.177.198/appointment/all-appointments",
+  url: "https://aarogya.onrender.com/appointment/all-appointments",
   data: JSON.stringify({
     name: JSON.parse(localStorage.getItem("active_user")).hospitalName
   }),

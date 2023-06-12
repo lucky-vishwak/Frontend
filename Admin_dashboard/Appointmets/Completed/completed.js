@@ -17,7 +17,7 @@ $("#logout").click(()=>{
 
 let hospitalObj={name:JSON.parse(localStorage.getItem("active_user")).hospitalName};
 $.post({
-    url:"http://18.116.177.198/appointment/completed-appointments",
+    url:"https://aarogya.onrender.com/appointment/completed-appointments",
     data:JSON.stringify(hospitalObj),
     contentType:'application/json; charset=utf-8',
     headers:{Authorization :localStorage.getItem('token')}
