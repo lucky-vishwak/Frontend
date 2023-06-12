@@ -16,7 +16,7 @@ $("#logout").click(() => {
     location.href = "../User_dashboard/Login/login.html"
 })
 
-const socket=io("https://socket-zlne.onrender.com/")
+const socket=io("ws://https://socket-zlne.onrender.com/")
 socket.emit("adduser",JSON.parse(localStorage.getItem("active_user"))._id)
 
 //on load related jquery
