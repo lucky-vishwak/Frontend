@@ -1,4 +1,4 @@
-const socket = io("https://socket-zlne.onrender.com")
+const socket = io("ws://https://socket-zlne.onrender.com")
 socket.emit("adduser", JSON.parse(localStorage.getItem("active_user"))._id)
 let appo = [];
 if (localStorage.getItem("active_user")) {
